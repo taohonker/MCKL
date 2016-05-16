@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>MCKL by zhouyan</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">MCKL</h1>
+      <h2 class="project-tagline">Monte Carlo Kernel Library</h2>
+      <a href="https://github.com/zhouyan/MCKL" class="btn">View on GitHub</a>
+      <a href="https://github.com/zhouyan/MCKL/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/zhouyan/MCKL/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h1>
+<a id="introduction" class="anchor" href="#introduction" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Introduction</h1>
+
+<p>The MCKL library provides a framework for implementing Monte Carlo algorithms.
+It was originally developed for the purpose of parallel implementation of SMC
+algorithms. But it now supports other algorithms as well. The library provides
+basic building blocks for implementing parallelizable Monte Carlo algorithms.</p>
+
+<h1>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Installation</h1>
+
+<p>This is a header only template C++ library. To install the library just move
+the contents of the <code>include</code> directory into a proper place, e.g.,
+<code>/usr/local/include</code> on Unix-alike systems.</p>
+
+<h1>
+<a id="documentation" class="anchor" href="#documentation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Documentation</h1>
+
+<p><a href="http://www.stack.nl/%7Edimitri/doxygen">Doxygen</a> generated reference manuals for the
+<a href="http://zhouyan.github.io/MCKLDoc/master">master</a> and <a href="http://zhouyan.github.io/MCKLDoc/develop">develop</a> branches, as well
+as for individual releases can be found online (see <a href="https://github.com/zhouyan/MCKL/releases">release
+notes</a> for links). A [Manual][MCKLManual] is also provided.</p>
+
+<h1>
+<a id="third-party-dependencies" class="anchor" href="#third-party-dependencies" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Third-party dependencies</h1>
+
+<p>This library requires a working BLAS implementation. Some of the library's
+functionalities can only be used if a optional dependencies are present.
+Notably, <a href="http://www.hdfgroup.org">HDF5</a>, <a href="http://threadingbuildingblocks.org">TBB</a>, <a href="http://www.openmp.org">OpenMP</a> and <a href="https://software.intel.com/en-us/intel-mkl">MKL</a>. One can tell
+the library that these optional features are available by defining
+configuration macros such as <code>-DMCKL_HAS_HDF5=1</code> during compilation.</p>
+
+<h1>
+<a id="compiler-support" class="anchor" href="#compiler-support" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Compiler support</h1>
+
+<p>This library makes heavy use of some template metaprogramming techniques. It
+requires a C++11 standard conforming compiler.</p>
+
+<p>This library has been regularly tested with recent <a href="http://clang.llvm.org">Clang</a>, <a href="http://gcc.gnu.org">GCC</a>
+and <a href="http://software.intel.com/en-us/intel-compilers">Intel C++ Compiler</a> in C++11 mode.</p>
+
+<p>Other compilers might work but are not tested. Complete C++11 implementation is
+required with thread-local storage as an exception.</p>
+
+<h1>
+<a id="examples" class="anchor" href="#examples" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Examples</h1>
+
+<p>Examples are in the <code>example</code> subdirectory, to build them,</p>
+
+<div class="highlight highlight-source-shell"><pre><span class="pl-k">export</span> CXXFLAGS=<span class="pl-s"><span class="pl-pds">"</span>-std=c++11<span class="pl-pds">"</span></span>
+<span class="pl-c1">cd</span> /path_to_MCKL_source
+mkdir build
+<span class="pl-c1">cd</span> build
+cmake .. -DCMAKE_BUILD_TYPE=Release
+make example</pre></div>
+
+<p>Some examples may only be built if optional dependencies are present.</p>
+
+<h1>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>License</h1>
+
+<p>The MCKL library is distributed with a 2-clause BSD license which can be found
+in the <code>LICENSE</code> file distributed with the source.</p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/zhouyan/MCKL">MCKL</a> is maintained by <a href="https://github.com/zhouyan">zhouyan</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
